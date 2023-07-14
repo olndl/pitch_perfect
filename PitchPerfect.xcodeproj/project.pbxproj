@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C9C0E2A61DB3B00961A04 /* PlaySoundsViewController+audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C9C0D2A61DB3B00961A04 /* PlaySoundsViewController+audio.swift */; };
 		7588F7672A5C8EA1004714B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F7662A5C8EA1004714B1 /* AppDelegate.swift */; };
 		7588F7692A5C8EA1004714B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F7682A5C8EA1004714B1 /* SceneDelegate.swift */; };
 		7588F76B2A5C8EA1004714B1 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F76A2A5C8EA1004714B1 /* RecordAudioViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751C9C0D2A61DB3B00961A04 /* PlaySoundsViewController+audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+audio.swift"; sourceTree = "<group>"; };
 		7588F7632A5C8EA1004714B1 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7588F7662A5C8EA1004714B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7588F7682A5C8EA1004714B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				7588F7712A5C8EA2004714B1 /* LaunchScreen.storyboard */,
 				7588F7742A5C8EA2004714B1 /* Info.plist */,
 				759EA74A2A61C13C00862C17 /* PlaySoundsViewController.swift */,
+				751C9C0D2A61DB3B00961A04 /* PlaySoundsViewController+audio.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7588F76B2A5C8EA1004714B1 /* RecordAudioViewController.swift in Sources */,
+				751C9C0E2A61DB3B00961A04 /* PlaySoundsViewController+audio.swift in Sources */,
 				7588F7672A5C8EA1004714B1 /* AppDelegate.swift in Sources */,
 				759EA74B2A61C13C00862C17 /* PlaySoundsViewController.swift in Sources */,
 				7588F7692A5C8EA1004714B1 /* SceneDelegate.swift in Sources */,
@@ -291,6 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3W4V694334;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -318,6 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3W4V694334;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

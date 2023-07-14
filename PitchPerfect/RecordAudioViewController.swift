@@ -58,5 +58,13 @@ class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
         ? performSegue(withIdentifier: "Stop recording", sender: audioRecorder.url)
         : print("recording was not successful")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Stop recording" {
+            let playSoundVC = segue.destination as! PlaySoundsViewController
+            let recorderAudioURL = sender as! URL
+            playSoundVC.recordAudioURL = recorderAudioURL
+        }
+    }
 }
 

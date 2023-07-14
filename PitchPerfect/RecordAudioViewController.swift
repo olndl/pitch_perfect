@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class RecodAudioViewController: UIViewController {
+class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
 
@@ -36,6 +36,7 @@ class RecodAudioViewController: UIViewController {
             try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
 
             try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+            audioRecorder.delegate = self
             audioRecorder.isMeteringEnabled = true
             audioRecorder.prepareToRecord()
             audioRecorder.record()
@@ -50,6 +51,10 @@ class RecodAudioViewController: UIViewController {
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("finished recording")
     }
 }
 

@@ -54,7 +54,9 @@ class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("finished recording")
+        flag
+        ? performSegue(withIdentifier: "Stop recording", sender: audioRecorder.url)
+        : print("recording was not successful")
     }
 }
 

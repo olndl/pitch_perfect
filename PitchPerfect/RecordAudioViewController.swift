@@ -21,11 +21,23 @@ class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewDidLoad()
         stopButtonComponent.isEnabled = false
     }
+    
+    func toggleAppState(_ isRecording: Bool) {
+        switch(isRecording) {
+        case true:
+            recordingLabel.text = "Recording in Progress"
+            stopButtonComponent.isEnabled = true
+            recordButtonComponent.isEnabled = false
+        case false:
+            recordButtonComponent.isEnabled = true
+            stopButtonComponent.isEnabled = false
+            recordingLabel.text = "Tap to Record"
+        }
+        
+    }
 
     @IBAction func recordButton(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress"
-        stopButtonComponent.isEnabled = true
-        recordButtonComponent.isEnabled = false
+        toggleAppState(true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
             let recordingName = "recordedVoice.wav"
@@ -43,9 +55,7 @@ class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopButton(_ sender: Any) {
-        recordButtonComponent.isEnabled = true
-        stopButtonComponent.isEnabled = false
-        recordingLabel.text = "Tap to Record"
+        toggleAppState(false)
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -54,7 +64,7 @@ class RecodAudioViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if (flag) {
+        if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             print("recording was not successful")

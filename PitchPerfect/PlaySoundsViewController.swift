@@ -58,7 +58,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //recordAudioURL = Bundle.main.url(forResource: "yourSound", withExtension: "mp3")
         setupAudio()
     }
     
